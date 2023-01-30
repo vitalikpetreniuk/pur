@@ -8,6 +8,7 @@ $(function() {
 	initTabs();
 	initAccordion();
 	initOpenDropCategoryFilter();
+	initChangeImageHover();
 });
 
 function initFixedHeader() {
@@ -167,3 +168,13 @@ function initOpenDropCategoryFilter(){
     return false;
   });
 };
+function initChangeImageHover() {
+	$(".text-image-block .services-list .img-1").hover(function(){$('.text-image-block .image img').attr('src', 'img/img-1.jpg')});
+	$(".text-image-block .services-list .img-2").hover(function(){$('.text-image-block .image img').attr('src', 'img/img-2.jpg')});
+	$(".text-image-block .services-list .img-3").hover(function(){$('.text-image-block .image img').attr('src', 'img/img-18.jpg')});
+	$(".text-image-block .services-list .img-4").hover(function(){$('.text-image-block .image img').attr('src', 'img/img-3.jpg')});
+	$(".text-image-block .services-list .img-5").hover(function(){$('.text-image-block .image img').attr('src', 'img/img-9.jpg')});
+	$(".text-image-block .services-list .img-6").hover(function(){$('.text-image-block .image img').attr('src', 'img/img-10.jpg')});
+	$(".text-image-block .services-list .img-7").hover(function(){$('.text-image-block .image img').attr('src', 'img/img-11.jpg')});
+	$(".text-image-block .services-list .img-8").hover(function(){$('.text-image-block .image img').attr('src', 'img/img-8.jpg')});
+}
