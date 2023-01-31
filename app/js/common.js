@@ -169,12 +169,10 @@ function initOpenDropCategoryFilter(){
   });
 };
 function initChangeImageHover() {
-  $(window).resize(function() {
-    if (window.innerWidth > "1024") {
-      $('.change-img').on('mouseenter', function () {
-      console.log('hover');
-      $('.text-image-block .image .change-img').attr('src', $(this).data('image'));
-      })
-    }
-  }).resize()
+  if(window.matchMedia("screen and (min-width: 1024px)").matches==true) {
+    $('.change-img').on('mouseenter', function () {
+    console.log('hover');
+    $('.text-image-block .image .change-img').attr('src', $(this).data('image'));
+    })
+  }
 }
