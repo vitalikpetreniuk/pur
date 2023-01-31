@@ -4,7 +4,8 @@ $(function() {
   initMobileNav();
   initSlickSlider();
   initSlickSliderCenter();
-  initSlickSliderProduct();
+  initGallerySlider();
+  initPromoSlider();
   initTabs();
   initAccordion();
   initOpenDropCategoryFilter();
@@ -86,43 +87,43 @@ function initSlickSliderCenter() {
     ]
   });
 }
-function initSlickSliderProduct() {
-  $('.slider-for').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    dots: true,
-    fade: true,
-    adaptiveHeight: true,
-    asNavFor: '.slider-nav'
-  });
-  $('.slider-nav').slick({
+function initGallerySlider() {
+  $('.gallery-slider').slick({
     slidesToShow: 4,
     slidesToScroll: 1,
-    asNavFor: '.slider-for',
     arrows: true,
     dots: false,
-    focusOnSelect: true,
     responsive: [
       {
         breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 768,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1
         }
       },
       {
-        breakpoint: 480,
+        breakpoint: 768,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1
+        }
+      }
+    ]
+  });
+}
+function initPromoSlider() {
+  $('.promo-section-slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: true,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          dots: false
         }
       }
     ]
