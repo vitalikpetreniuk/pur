@@ -10,6 +10,7 @@ $(function() {
   initAccordion();
   initOpenDropCategoryFilter();
   initChangeImageHover();
+  initOpenBlock();
 });
 
 function initFixedHeader() {
@@ -176,4 +177,11 @@ function initChangeImageHover() {
     $('.text-image-block .image .change-img').attr('src', $(this).data('image'));
     })
   }
+}
+function initOpenBlock(){
+  $('.column-border-list .more').on('click', function() {
+    $(this).closest('.column-border-list .text');
+    $(this).siblings('.expanded').slideToggle();
+    return false;
+  });
 }

@@ -2502,6 +2502,13 @@ section{
 .column-border-list li:last-child{
 	margin: 0;
 }
+.column-border-list .expanded{
+  display: none;
+  padding-top: 10px;
+}
+.column-border-list .expanded p:last-child{
+  margin: 0;
+}
 .column-border-list .more{
 	display: inline-block;
 	text-decoration: none;
