@@ -12,6 +12,7 @@ $(function() {
   initChangeImageHover();
   initOpenBlock();
   initCustomSelect();
+  initBlocksAnimate();
 });
 
 function initFixedHeader() {
@@ -39,15 +40,11 @@ function initHeaderSearch() {
 function initMobileNav(){
   $('.mob-btn').on('click', function(){
     $(this).closest('#nav').toggleClass('active');
+    $('#nav .nav-menu').fadeOut("slow");
+    $('#nav.active .nav-menu').fadeIn("slow");
     $('body').toggleClass('open-nav');
     return false;
   });
-  // $(document).click(function(event) {
-  //  if ($(event.target).closest("#nav .nav-menu").length) return;
-  //  $("#nav").removeClass('active');
-  //  $('body').removeClass('open-nav');
-  //  event.stopPropagation();
-  // });
 };
 function initSlickSlider() {
   $('.slider').slick({
@@ -183,4 +180,38 @@ function initOpenBlock(){
 }
 function initCustomSelect(){
   $('.custom-select select').select2();
+}
+function initBlocksAnimate(){
+  $('.post').addClass("hidden").viewportChecker({
+    classToAdd: 'visible animated fadeInDown', // Class to add to the elements when they are visible
+    offset: 100
+  });
+  $('.post2').addClass("hidden").viewportChecker({
+    classToAdd: 'visible animated lightSpeedIn', // Class to add to the elements when they are visible
+    offset: 100
+  });
+  $('.post3').addClass("hidden").viewportChecker({
+    classToAdd: 'visible animated flipInX', // Class to add to the elements when they are visible
+    offset: 100
+  });
+  $('.post4').addClass("hidden").viewportChecker({
+    classToAdd: 'visible animated bounceInRight', // Class to add to the elements when they are visible
+    offset: 100
+  });
+  $('.post5').addClass("hidden").viewportChecker({
+    classToAdd: 'visible animated bounceInLeft', // Class to add to the elements when they are visible
+    offset: 100
+  });
+  $('.post6').addClass("hidden").viewportChecker({
+    classToAdd: 'visible animated fadeInLeft', // Class to add to the elements when they are visible
+    offset: 100
+  });
+  $('.post7').addClass("hidden").viewportChecker({
+    classToAdd: 'visible animated fadeInRight', // Class to add to the elements when they are visible
+    offset: 100
+  });
+  $('.post8').addClass("hidden").viewportChecker({
+    classToAdd: 'visible animated fadeInUp', // Class to add to the elements when they are visible
+    offset: 100
+  });
 }
