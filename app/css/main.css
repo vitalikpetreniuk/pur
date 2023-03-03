@@ -2436,7 +2436,19 @@ section{
 	max-width: 600px;
 	margin: -47px -19px 0;
 	opacity: 0;
-    text-transform: uppercase;
+  text-transform: uppercase;
+}
+.about_section-slider .slider_item .comment-author{
+  color: #567982;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 30px;
+}
+.about_section-slider .slider_item .comment-status{
+  font: 300 16px/30px Grammatika;
+  color: #fff;
+  text-transform: none;
 }
 .about_section-slider .slider_item .comment p {
   color: rgba(255, 255, 255, 0.85);
@@ -2447,8 +2459,6 @@ section{
   font-weight: 500;
 }
 .about_section-slider .slick-center .slider_item .comment{
-	opacity: 1;
-}.about_section-slider .slick-center .slider_item .comment{
 	opacity: 1;
 }
 .about_section-slider .slick-arrow.slick-prev {
@@ -2592,6 +2602,7 @@ section{
 	position: absolute;
 	top: 15px;
 	right: 15px;
+  z-index: 10;
 }
 .category-filter{
 	justify-content: flex-end;
