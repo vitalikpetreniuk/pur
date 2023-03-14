@@ -181,7 +181,18 @@ function initOpenBlock(){
   });
 }
 function initCustomSelect(){
-  $('.custom-select select').select2();
+  $('#treatment_tag').select2({
+    placeholder: "Treatment",
+  })
+  $('#treatment_category').select2({
+    placeholder: "Category",
+  })
+  $('#condition_tag').select2({
+    placeholder: "Condition",
+  })
+  $('#condition_category').select2({
+    placeholder: "Category",
+  })
 }
 function initBlocksAnimate(){
   $('.post').addClass("hidden").viewportChecker({
