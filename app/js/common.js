@@ -95,6 +95,7 @@ function initSlickSliderCenter() {
 				breakpoint: 768,
 				settings: {
 					slidesToShow: 1,
+					infinite: true,
 				}
 			}
 		]
@@ -104,11 +105,14 @@ function initSlickSliderCenter() {
 
 	function windowSize(ma) {
 		if ((ma && ma.matches) || $(window).width() <= 768) {
-			
-			$('.slider-quote__slide_empty').remove()
+
+			$('.slider-quote').slick('slickRemove');
 		} else {
 
-			$('<div class="slider-quote__slide slider-quote__slide_empty slider-slide"></div><div class="slider-quote__slide slider-quote__slide_empty slider-slide"></div>').append('.slider-quote');
+			// $(window).on( "load", function() {
+				
+				$('.slider-quote').slick('slickAdd',"<div class='slider-quote__slide slider-quote__slide_empty slider-slide'></div><div class='slider-quote__slide slider-quote__slide_empty slider-slide'></div>");
+			// });
 		}
 	}windowSize();
 }
