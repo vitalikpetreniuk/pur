@@ -948,7 +948,8 @@ section{
   padding: 0 15px 42px;
 }
 .gallery-slider .slider-item{
-	cursor: pointer;
+	display: block;
+  text-decoration: none;
 }
 .gallery-slider .slider-item:hover .text{
 	box-shadow: 0px 0px 12px 0px rgb(0 0 0 / 35%);
@@ -2779,26 +2780,9 @@ section{
 	  background-position: 50% -40px;
 	}
 }
-@media (max-width: 1499px) {
-	.about_section-slider .slick-arrow.slick-prev {
-	  left: -70px;
-	}
-	.about_section-slider .slick-arrow.slick-next {
-	  right: -70px;
-	}
-}
 @media (max-width: 1399px) {
 	.slider-section ~ .consultation-section {
 	  margin-top: -150px;
-	}
-	.about_section-slider .slick-arrow.slick-prev {
-	  left: 0;
-	}
-	.about_section-slider .slick-arrow.slick-next {
-	  right: 0;
-	}
-	.about_section-slider .slider_item .comment{
-		transform: translate(55px,-50%);
 	}
 	.gallery-slider .slick-prev{
 		left: 15px;
@@ -2894,12 +2878,6 @@ section{
   }
   .services-price .box .box-content{
   	min-height: 320px;
-  }
-  .about_section-slider .slick-slide{
-  	margin: 0 -90px;
-  }
-  .about_section-slider .slider_item .comment{
-  	margin: -47px 120px 0;
   }
   .bottom-circle:before{
   	background-position: 50% 175px;
@@ -3211,9 +3189,6 @@ section{
   .two-columns-block .text-block .item{
     padding-left: 20px;
     padding-right: 20px;
-  }
-  .about_section-slider .slider_item .comment {
-    margin: -47px 0 0 210px;
   }
   .gallery-slider-section,
   .gallery-slider-section:first-child{
@@ -4115,33 +4090,6 @@ section{
   .slider-block-section{
   	height: auto;
   	padding: 84px 0 97px;
-  }
-  .about_section-slider .slick-slide{
-  	width: 390px !important;
-  	margin: 0;
-  }
-  .about_section-slider .about_section-slider-visual{
-  	height: 346px;
-  	padding: 0 60px;
-  }
-  .about_section-slider .about_section-slider-visual img{
-  	width: 100%;
-  	height: 100%;
-  }
-  .about_section-slider .slider_item{
-  	display: flex;
-  	flex-wrap: wrap;
-  }
-  .about_section-slider .slider_item .comment{
-  	position: static;
-  	width: 290px;
-  	margin: 0 auto 110px;
-  	transform: none;
-  	order: -1;
-  }
-  .about_section-slider .slider_item .comment p {
-    font-size: 30px;
-    line-height: 30px;
   }
   .slick-prev,
   .slick-next{
