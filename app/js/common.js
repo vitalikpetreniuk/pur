@@ -3,6 +3,7 @@ $(function() {
   initHeaderSearch();
   initMobileNav();
   initSlickSlider();
+  initSlickSlider2();
   initGallerySlider();
   initSlickSliderCenter();
   initPromoSlider();
@@ -55,6 +56,16 @@ function initSlickSlider() {
     fade: true,
     autoplay: true,
     autoplaySpeed: 4000
+  });
+}
+function initSlickSlider2() {
+  $('.before-after-slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: false,
+    // autoplay: true,
+    autoplaySpeed: 3000
   });
 }
 function initGallerySlider() {
