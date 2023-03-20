@@ -2353,12 +2353,16 @@ section{
 	margin: 0 -8px;
 }
 .check-list-section{
-	padding: 70px 0 75px;
+	padding: 20px 0 75px;
 	text-align: center;
 	line-height: 30px;
 }
 .bottom-circle{
+  padding-top: 80px;
 	padding-bottom: 170px;
+}
+.bottom-circle ~ .text-image-services.bg-gray{
+  padding-top: 0;
 }
 .check-list-section .top-title{
 	margin: 0 0 17px;
@@ -2368,14 +2372,12 @@ section{
 }
 .check-list{
 	padding: 0;
-	margin: 74px auto 0;
+	margin: 74px auto 85px;
 	list-style: none;
 	font: 300 16px/30px Grammatika;
 	column-count: 2;
-	column-fill: auto;
 	text-align: left;
 	max-width: 1172px;
-	height: 380px;
 }
 .check-list li{
 	padding: 13px 82px;
@@ -2919,11 +2921,6 @@ section{
   background: #fff;
   color: #162435;
 }
-.treatment-inner .check-list{
-  height: auto;
-  column-fill: inherit;
-  margin-bottom: 85px;
-}
 .accordion-icons .opener{
   opacity: .4;
 }
@@ -3221,20 +3218,23 @@ section{
     padding: 50px 0 240px;
   }
   .check-list-section{
-  	padding: 60px 0 135px;
+  	padding: 20px 0 135px;
   }
   .check-list-section .top-title {
     margin: 0 0 21px;
   }
   .check-list{
   	margin-top: 40px;
-  	height: 410px;
+    margin-bottom: 40px;
   }
   .check-list li{
   	padding-right: 5px;
   }
   .services-price .box .box-content{
   	min-height: 320px;
+  }
+  .bottom-circle{
+    padding-top: 50px;
   }
   .bottom-circle:before{
   	background-position: 50% 175px;
@@ -3254,6 +3254,9 @@ section{
   }
   .nav-menu .submenu-container{
     top: 70px;
+  }
+  .bottom-circle ~ .text-image-services.bg-gray {
+    padding-top: 50px;
   }
 }
 @media (max-width: 1023px) {
@@ -3548,9 +3551,6 @@ section{
   	font-size: 37px;
   	line-height: 42px;
   }
-  .check-list {
-    height: auto;
-  }
   .content-section{
   	padding: 70px 0;
   }
@@ -3625,8 +3625,8 @@ section{
   .before-after-slider .slick-next {
     right: -45px;
   }
-  .treatment-inner .check-list{
-    margin-bottom: 40px;
+  .check-list{
+    margin-bottom: 0;
   }
   .accordion-icons > li .accordion-slide{
     padding: 0 10px 17px;
@@ -4520,7 +4520,7 @@ section{
     padding: 13px 16px;
   }
   .check-list-section {
-    padding: 50px 0 100px;
+    padding: 60px 0 75px;
   }
   .check-list-section .top-title {
     margin: 0 0 30px;
