@@ -190,6 +190,11 @@ function initOpenBlock(){
     $('.column-border-list .text .add-something').toggleClass('open-text');
     return false;
   });
+  $('.nav-menu .arrow-down').on('click', function() {
+    $(this).closest('.menu-item-has-children').toggleClass('open');
+    $(this).siblings('.nav-menu .sub-menu').slideToggle();
+    return false;
+  });
 }
 function initCustomSelect(){
   $('#treatment_tag').select2({
@@ -239,19 +244,3 @@ function initBlocksAnimate(){
     offset: 100
   });
 }
-
-
-
-// if($('.swiper').length) {
-
-// 	new Swiper('.slider-quote', {
-
-// 		navigation: {
-// 		nextEl: '.swiper-button-next',
-// 		prevEl: '.swiper-button-prev',
-// 		},
-// 		slidesPerView: 'auto',
-// 		// slidesPerView: 3,
-// 		centeredSlides: true,
-// 	});
-// };
