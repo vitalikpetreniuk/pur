@@ -2782,6 +2782,7 @@ section{
   background: url(../img/bg-footer.png) no-repeat;
   background-size: cover;
   color: #fff;
+  padding-top: 40px;
   overflow: hidden;
 }
 #footer .logo{
