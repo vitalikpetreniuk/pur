@@ -1939,6 +1939,7 @@ section{
 	position: relative;
 }
 .providers-list .image{
+  display: block;
 	width: 390px;
 	height: 518px;
 	margin: 0 0 46px;
