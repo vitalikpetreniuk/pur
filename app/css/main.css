@@ -505,6 +505,7 @@ body.open-nav{
 }
 .nav-menu .submenu-container{
   display: none;
+  column-count: 3;
   position: absolute;
   top: 80px;
   left: 50%;
@@ -513,6 +514,8 @@ body.open-nav{
   box-shadow: 0px 22px 21px -4px rgba(0, 0, 0, 0.24);
   border-radius: 0px 0px 10px 10px;
   padding: 63px 68px;
+  margin: 0;
+  list-style: none;
   transform: translateX(-50%);
   z-index: 10;
 }
@@ -526,7 +529,6 @@ body.open-nav{
   background: rgba(255, 255, 255, 0.01);
 }
 .nav-menu .submenu-container .submenu-column{
-  width: 33.3%;
   padding: 0 30px;
 }
 .nav-menu .submenu-container h3{
@@ -542,9 +544,6 @@ body.open-nav{
   font: 300 14px/14px Grammatika;
   text-transform: none;
 } 
-.nav-menu .sub-menu:last-child{
-  margin: 0;
-}
 .nav-menu .sub-menu li{
   margin: 0 0 14px;
 }
@@ -555,8 +554,7 @@ body.open-nav{
   color: #162435;
 }
 .nav-menu .menu-item:hover .submenu-container{
-  display: flex;
-  flex-wrap: wrap;
+  display: block;
 }
 .nav-menu .view-more{
   text-decoration: none;
@@ -3082,6 +3080,78 @@ section{
 .scheme-list p:last-child{
   margin: 0;
 }
+.ambassador-page #main{
+  background-color: #F5F5F5;
+  background-image: url(../img/bg-ambassador.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.ambassador-page .content-section{
+  background: none;
+}
+.ambassador-section{
+  text-align: left;
+}
+.ambassador-section .content-section .top-title {
+  margin: 0 0 13px;
+}
+.ambassador-section h3{
+  font: 500 16px/30px Grammatika;
+  color: #567982;
+  margin: 0 0 10px;
+}
+.ambassador-section .ambassador-text{
+  width: 50%;
+}
+.ambassador-section .contact-form{
+  width: 534px;
+}
+.pros-block .item{
+  border-top: 1px solid #C5C5C5;
+  padding: 20px 30px 20px 0;
+}
+.pros-comment{
+  font: 300 16px/30px Grammatika;
+  align-items: center;
+  background: #fff;
+  border-radius: 0 14px 14px 0;
+  min-height: 320px;
+  padding: 0 90px;
+  text-align: left;
+  position: relative;
+}
+.pros-comment .wrap-image{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 241px;
+  height: 100%;
+  border-radius: 500px;
+  overflow: hidden;
+}
+.pros-comment .wrap-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.pros-comment .author{
+  font: 500 16px/16px Grammatika;
+  text-transform: uppercase;
+  color: #567982;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 @-webkit-keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-10%,0);transform:translate3d(0,-10%,0)}100%{opacity:1;-webkit-transform:none;transform:none}}@keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-10%,0);-ms-transform:translate3d(0,-10%,0);transform:translate3d(0,-10%,0)}100%{opacity:1;-webkit-transform:none;-ms-transform:none;transform:none}}
 @media (min-width: 1441px) {
 	.consultation-section:before{
