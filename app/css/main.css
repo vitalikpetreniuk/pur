@@ -623,7 +623,7 @@ body.open-nav{
 	display: block;
 	position: absolute;
 	top: -15px;
-	right: -15px;
+	right: 0;
 }
 .form-search input{
   height: 46px;
@@ -1246,7 +1246,6 @@ section{
 	display: inline-block;
 	vertical-align: middle;
 	width: 50px;
-	margin-right: 26px;
 }
 .news-section{
 	padding: 123px 0 53px;
@@ -2360,7 +2359,7 @@ section{
   padding-top: 80px;
 	padding-bottom: 170px;
 }
-.bottom-circle ~ .text-image-services.bg-gray{
+.bottom-circle + .text-image-services.bg-gray{
   padding-top: 0;
 }
 .check-list-section .top-title{
@@ -2410,6 +2409,8 @@ section{
 .services-list-box li{
 	padding: 20px 25px;
 	border-left: 1px solid #fff;
+  width: 33.3%;
+  text-align: center;
 }
 .services-list-box li:first-child{
 	border: none;
@@ -2620,7 +2621,7 @@ section{
 	padding-bottom: 50px;
 }
 .news-section.category.filter h2{
-	max-width: 80%;
+	max-width: 65%;
 }
 .news-section.category.filter .news-list{
 	margin-top: 127px;
@@ -3088,42 +3089,75 @@ section{
 }
 .ambassador-page .content-section{
   background: none;
+  padding-bottom: 15px;
 }
 .ambassador-section{
   text-align: left;
 }
-.ambassador-section .content-section .top-title {
-  margin: 0 0 13px;
+.content-section .ambassador-section .top-title {
+  margin: 0 0 15px;
+}
+.content-section .ambassador-section h1 {
+  margin: 0 0 24px;
 }
 .ambassador-section h3{
   font: 500 16px/30px Grammatika;
   color: #567982;
-  margin: 0 0 10px;
+  margin: 0 0 6px;
 }
 .ambassador-section .ambassador-text{
-  width: 50%;
+  width: 44%;
 }
 .ambassador-section .contact-form{
   width: 534px;
+  margin: -5px 70px;
+  font: 300 16px/30px Grammatika;
+  padding: 65px 53px 22px;
+}
+.ambassador-section .contact-form .title{
+  text-align: left;
+  margin: 0 0 30px;
+}
+.ambassador-section .contact-form p{
+  margin: 0 0 59px;
+}
+.ambassador-section .contact-form .wrap-input{
+  padding-bottom: 6px;
+  margin-bottom: 30px;
+}
+.ambassador-section .contact-form label{
+  margin: 0;
+}
+.ambassador-section .contact-form textarea{
+  line-height: 30px;
+}
+.pros-block{
+  padding: 8px 0;
 }
 .pros-block .item{
   border-top: 1px solid #C5C5C5;
-  padding: 20px 30px 20px 0;
+  padding: 22px 40px 20px 0;
+}
+.pros-block ul{
+  padding-left: 25px;
+  margin: 0;
 }
 .pros-comment{
+  max-width: 1070px;
+  margin: 64px auto;
   font: 300 16px/30px Grammatika;
   align-items: center;
   background: #fff;
   border-radius: 0 14px 14px 0;
   min-height: 320px;
-  padding: 0 90px;
+  padding: 0 110px 20px 192px;
   text-align: left;
   position: relative;
 }
 .pros-comment .wrap-image{
   position: absolute;
   top: 0;
-  left: 0;
+  left: -112px;
   width: 241px;
   height: 100%;
   border-radius: 500px;
@@ -3134,12 +3168,26 @@ section{
   height: 100%;
   object-fit: cover;
 }
+.pros-comment p{
+  margin: 0 0 15px;
+}
 .pros-comment .author{
   font: 500 16px/16px Grammatika;
   text-transform: uppercase;
   color: #567982;
 }
-
+.ambassador-form{
+  position: relative;
+}
+.membership-page .content-section{
+  padding-top: 264px;
+}
+.membership-page .content-section .top-title {
+  margin: 0 0 22px;
+}
+.membership-page .content-section h1 {
+  margin: 0 0 24px;
+}
 
 
 
@@ -3191,6 +3239,9 @@ section{
 	.gallery-slider .slick-next{
 		right: 15px;
 	}
+  .pros-comment{
+    max-width: 970px;
+  }
 }
 @media (max-width: 1229px) {
   .scheme-list{
@@ -3208,6 +3259,12 @@ section{
   }
   .scheme-list li:nth-child(2n):after{
     right: -61px;
+  }
+  .news-section.category.filter h2 {
+    max-width: 62%;
+  }
+  .pros-comment{
+    max-width: 940px;
   }
 }
 @media (max-width: 1199px) {
@@ -3309,7 +3366,7 @@ section{
     padding-top: 50px;
   }
   .bottom-circle:before{
-  	background-position: 50% 175px;
+  	background-position: 50% 135px;
   }
   .options-list .social-networks{
     margin: 10px 10px 0;
@@ -3329,6 +3386,19 @@ section{
   }
   .bottom-circle ~ .text-image-services.bg-gray {
     padding-top: 50px;
+  }
+  .news-section.category.filter h2 {
+    max-width: 55%;
+  }
+  .services-list{
+    font-size: 14px;
+  }
+  .ambassador-section .contact-form{
+    margin: 0 0 0 auto;
+  }
+  .pros-comment {
+    max-width: 765px;
+    padding: 0 30px 20px 165px;
   }
 }
 @media (max-width: 1023px) {
@@ -3380,9 +3450,6 @@ section{
   }
   .form-search .search {
     width: 500px;
-  }
-  .form-search.open .search{
-    right: 0;
   }
   #nav{
     position: absolute;
@@ -3599,7 +3666,7 @@ section{
   	padding: 65px 20px 40px 0;
   }
   .services-list{
-  	font-size: 13px;
+  	font-size: 10px;
   }
   .services-list a{
   	padding: 14px 0;
@@ -3607,9 +3674,6 @@ section{
   }
   .services-list a:after{
   	right: 10px;
-  }
-  .services-list .icon{
-  	margin-right: 15px;
   }
   .facts-section {
     padding-bottom: 200px;
@@ -3639,7 +3703,7 @@ section{
   	font-size: 10px;
   }
   .services-list-box li{
-  	padding: 20px
+  	padding: 15px;
   }
   .two-columns-block .heading,
   .two-columns-block .text-block .item{
@@ -3788,6 +3852,28 @@ section{
   #nav .menu-item-has-children.open .arrow-down:before{
     transform: rotate(45deg);
   }
+  .news-section.category.filter h2 {
+    max-width: 40%;
+  }
+  .services-list .icon{
+    width: 25px;
+    margin-right: 10px;
+  }
+  .ambassador-form{
+    width: 50%;
+  }
+  .ambassador-section .contact-form{
+    width: 100%;
+    padding: 50px 20px 22px;
+  }
+  .pros-comment{
+    max-width: 100%;
+    border-radius: 500px 14px 14px 500px;
+    padding: 0 20px 20px 265px;
+  }
+  .pros-comment .wrap-image{
+    left: 0;
+  }
 }
 @media (max-width: 767px) {
 	h1, h2, .h2 {
@@ -3838,7 +3924,6 @@ section{
 	}
   .form-search.open .search{
     top: -12px;
-    right: -5px;
   }
 	.form-search input{
 	  height: 40px;
@@ -4211,7 +4296,7 @@ section{
   .bottom-circle:before,
   .facts-section:before{
   	background: url(../img/bg-circle-gray-bottom-mobile.png) no-repeat 50% 67px;
-  	background-size: 100% 100%;
+  	background-size: 100% 90%;
   	height: 444px;
   }
   .text-image-block .text,
@@ -4339,6 +4424,9 @@ section{
   	font-size: 14px;
   	line-height: 16px;
   	margin: 0 0 13px;
+  }
+  .user-form label[for="message"]{
+    font-size: 16px;
   }
   .contact-form .wrap-input{
   	padding: 9px 15px 12px;
@@ -4589,7 +4677,7 @@ section{
   	padding: 22px 17px;
   }
   .services-list-box li {
-    padding: 13px 16px;
+    padding: 13px 8px;
   }
   .check-list-section {
     padding: 60px 0 75px;
@@ -4707,7 +4795,9 @@ section{
     margin: 0 0 58px;
   }
   .news-section .category-filter{
-  	position: static;
+    right: 0;
+    top: 0;
+  	position: relative;
   }
   .category-filter .form-search.open {
     margin-left: 270px;
@@ -4731,10 +4821,10 @@ section{
 		line-height: 25px;
 	}
 	.footer-sections .user-form {
-	  margin: 20px 0 35px;
+	  margin: 20px -15px 35px;
 	}
 	.footer-sections .social-networks{
-		padding-bottom: 22px;
+		padding-bottom: 19px;
 	}
 	#footer .logo{
 		margin-top: 16px;
@@ -4794,6 +4884,95 @@ section{
   .options-list .social-networks{
     margin: 0 12px;
   }
+  .ambassador-page .content-section{
+    padding: 235px 0 15px;
+  }
+  .ambassador-section .ambassador-text,
+  .ambassador-section .contact-form{
+    width: 100%;
+  }
+  .ambassador-form{
+    width: 100%;
+    padding: 0 10px 112px;
+  }
+  .ambassador-form:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -15px;
+    width: 108%;
+    height: 100%;
+    background: url(../img/bg-contact-mobile.png) no-repeat 50% 48px;
+    background-size: cover;
+    z-index: -1;
+  }
+  .ambassador-section .contact-form{
+    padding: 58px 28px 22px;
+  }
+  .ambassador-section .contact-form,
+  .ambassador-section .contact-form .title{
+    text-align: center;
+  }
+  .ambassador-section .contact-form .title{
+    margin: 0 0 19px;
+  }
+  .ambassador-section .contact-form p {
+    margin: 0 0 31px;
+  }
+  .ambassador-section .contact-form .wrap-input{
+    text-align: left;
+    margin-bottom: 27px;
+  }
+  .ambassador-section .contact-form .wrap-input.button{
+    text-align: center;
+  }
+  .ambassador-section .contact-form label {
+    margin: 0 0 9px;
+  }
+  .ambassador-section .ambassador-text{
+    padding: 0 27px 49px;
+  }
+  .content-section .ambassador-section .top-title {
+    margin: 0 0 21px;
+  }
+  .content-section .ambassador-section h1 {
+    font-size: 47px;
+    line-height: 41px;
+    margin: 0 0 56px;
+  }
+  .ambassador-section .pros-block{
+    display: none;
+  }
+  .ambassador-section .pros-block.mobile{
+    display: block;
+    padding: 62px 15px 50px;
+  }
+  .ambassador-section .pros-block .item{
+    padding: 22px 9px 18px 9px;
+  }
+  .ambassador-page #main{
+    background: #F5F5F5;
+  }
+  .pros-comment {
+    width: 326px;
+    margin: 0 auto 66px;
+    border-radius: 500px 500px 14px 14px ;
+    padding: 0;
+  }
+  .pros-comment .wrap-image{
+    position: static;
+    width: 326px;
+    height: 433px;
+  }
+  .pros-comment .text{
+    padding: 52px 24px 25px;
+  }
+  .pros-comment p {
+    margin: 0 0 24px;
+  }
+  .footer-sections section{
+    padding: 0 30px 40px;
+  }
 }
 @media (max-width: 479px) {
   .form-search .search{
@@ -4839,5 +5018,8 @@ section{
   }
   .before-after-slider .wrap-img img{
     height: 187px;
+  }
+  .services-list {
+    font-size: 11px;
   }
 }
