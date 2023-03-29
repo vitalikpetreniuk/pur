@@ -41,8 +41,8 @@ function initHeaderSearch() {
 function initMobileNav(){
   $('.mob-btn').on('click', function(){
     $(this).closest('#nav').toggleClass('active');
-    $('#nav .nav-menu').fadeOut("slow");
-    $('#nav.active .nav-menu').fadeIn("slow");
+    $('#nav .mega-menu').fadeOut("slow");
+    $('#nav.active .mega-menu').fadeIn("slow");
     $('body').toggleClass('open-nav');
     return false;
   });
@@ -190,9 +190,9 @@ function initOpenBlock(){
     $('.column-border-list .text .add-something').toggleClass('open-text');
     return false;
   });
-  $('.nav-menu .arrow-down').on('click', function() {
-    $(this).closest('.menu-item-has-children').toggleClass('open');
-    $(this).siblings('.nav-menu .sub-menu').slideToggle();
+  $('.mega-menu .arrow-down').on('click', function() {
+    $(this).closest('.mega-menu-item-has-children').toggleClass('open');
+    $(this).siblings('.mega-menu .sub-menu').slideToggle();
     return false;
   });
 }

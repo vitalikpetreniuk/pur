@@ -454,7 +454,10 @@ input:-webkit-autofill {
 body.open-nav{
   overflow: hidden;
 }
-#nav .nav-menu{
+.mega-menu-toggle{
+  display: none;
+}
+#nav .mega-menu{
   margin: 0;
   padding: 0;
   list-style: none;
@@ -465,18 +468,18 @@ body.open-nav{
   text-transform: uppercase;
   color: #162435;
 }
-#nav .nav-menu > li > a{
+#nav .mega-menu > li > a{
   display: block;
   text-decoration: none;
   color: inherit;
   padding: 5px 17px;
 }
-#nav .nav-menu > li:first-child > a{
+#nav .mega-menu > li:first-child > a{
   padding-left: 0;
 }
-#nav .nav-menu > li > a:hover,
-#nav .nav-menu > li.current > a,
-.nav-menu > .menu-item:hover{
+#nav .mega-menu > li > a:hover,
+#nav .mega-menu > li.current > a,
+.mega-menu > .mega-menu-item:hover{
   color: #567982;
 }
 #nav .mob-btn{
@@ -500,10 +503,10 @@ body.open-nav{
 .mob-btn span{
   font-size: 0;
 }
-.nav-menu .arrow-down{
+.mega-menu .arrow-down{
   display: none;
 }
-.nav-menu .submenu-container{
+.mega-menu > li > ul{
   display: none;
   column-count: 3;
   position: absolute;
@@ -519,7 +522,7 @@ body.open-nav{
   transform: translateX(-50%);
   z-index: 10;
 }
-.nav-menu .submenu-container:before{
+.mega-menu > li > ul:before{
   content: '';
   position: absolute;
   top: -40px;
@@ -528,43 +531,52 @@ body.open-nav{
   height: 40px;
   background: rgba(255, 255, 255, 0.01);
 }
-.nav-menu .submenu-container .submenu-column{
+.mega-menu > li > ul .mega-menu-row{
   padding: 0 30px;
 }
-.nav-menu .submenu-container h3{
+.mega-menu > li > ul h3{
   font: 500 14px/14px Grammatika;
   color: #162435;
   text-transform: uppercase;
   margin: 0 0 14px;
 }
-.nav-menu .sub-menu{
+.mega-menu .mega-menu-row{
   padding: 0;
   margin: 0 0 33px;
   list-style: none;
   font: 300 14px/14px Grammatika;
   text-transform: none;
 } 
-.nav-menu .sub-menu li{
+.mega-menu > li > ul li{
   margin: 0 0 14px;
 }
-.nav-menu .sub-menu a{
+.mega-menu > li > ul a{
   text-decoration: none;
 }
-.nav-menu .sub-menu a:hover{
+.mega-menu > li > ul a:hover{
   color: #162435;
 }
-.nav-menu .menu-item:hover .submenu-container{
+.mega-menu .mega-menu-item:hover .mega-sub-menu{
   display: block;
 }
-.nav-menu .view-more{
+.mega-sub-menu,
+.mega-menu-column-item ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.mega-menu .view-more{
   text-decoration: none;
   font-weight: 500;
   color: #162435;
 }
-.nav-menu .view-more:hover{
+.mega-menu .view-more:hover{
   color: #567982;
 }
-#header.sticky .nav-menu .submenu-container{
+.mega-menu-column-item{
+  margin-bottom: 33px;
+}
+#header.sticky .mega-menu > li > ul{
   top: 55px;
 }
 .header-user-info{
@@ -3277,7 +3289,7 @@ section{
   .form-search .search{
     width: 600px;
   }
-  #nav .nav-menu > li > a{
+  #nav .mega-menu > li > a{
     padding: 5px 10px;
   }
   .slider-container .text-box{
@@ -3381,7 +3393,7 @@ section{
   .works-section{
     padding-bottom: 140px;
   }
-  .nav-menu .submenu-container{
+  .mega-menu > li > ul{
     top: 70px;
   }
   .bottom-circle ~ .text-image-services.bg-gray {
@@ -3458,7 +3470,7 @@ section{
     width: 100%;
     height: 100%;
   }
-  #nav .nav-menu{
+  #nav .mega-menu{
     display: none;
     background: rgba(255, 255, 255, 0.95);
     padding: 0 0 20px;
@@ -3468,14 +3480,14 @@ section{
     height: 100vh;
     overflow-y: auto;
   }
-  #nav .nav-menu > li > a,
-  #nav .nav-menu > li:first-child > a{
+  #nav .mega-menu > li > a,
+  #nav .mega-menu > li:first-child > a{
   	padding: 25px 24px;
   }
   #nav .mob-btn{
     display: block;
   }
-  #header.sticky .nav-menu{
+  #header.sticky .mega-menu{
     margin-top: 73px;
   }
   body.open-nav .header-main{
@@ -3807,7 +3819,7 @@ section{
   .scheme-list li:last-child{
     margin: 0;
   }
-  .nav-menu .submenu-container{
+  .mega-menu > li > ul{
     position: static;
     width: 100%;
     padding: 0;
@@ -3816,28 +3828,28 @@ section{
     border-radius: 0;
     transform: translateX(0);
   }
-  .nav-menu > .menu-item:hover .submenu-container,
-  .nav-menu .submenu-container:before{
+  .mega-menu > .mega-menu-item:hover .mega-sub-menu,
+  .mega-menu > li > ul:before{
     display: none;
   }
-  .nav-menu .sub-menu{
+  .mega-menu > li > ul{
     margin: 0 0 30px;
   }
-  .nav-menu .submenu-container .submenu-column{
+  .mega-menu > li > ul ul{
     width: 100%;
     padding: 15px 24px;
   }
-  #nav .nav-menu > li{
+  #nav .mega-menu > li{
     position: relative;
   }
-  .nav-menu .arrow-down{
+  .mega-menu .arrow-down{
     display: block;
     font-size: 0;
     position: absolute;
     top: 24px;
     right: 24px;
   }
-  .nav-menu .arrow-down:before{
+  .mega-menu .arrow-down:before{
     content: '+';
     display: block;
     width: 26px;
@@ -3846,10 +3858,10 @@ section{
     color: #567982;
     transition: .3s;
   }
-  #nav .menu-item-has-children.open .submenu-container{
+  #nav .mega-menu-item-has-children.open .mega-sub-menu{
     display: block;
   }
-  #nav .menu-item-has-children.open .arrow-down:before{
+  #nav .mega-menu-item-has-children.open .arrow-down:before{
     transform: rotate(45deg);
   }
   .news-section.category.filter h2 {
