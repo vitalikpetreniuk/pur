@@ -461,6 +461,7 @@ body.open-nav{
   margin: 0;
   padding: 0;
   list-style: none;
+  display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
   align-items: center;
@@ -567,7 +568,8 @@ body.open-nav{
 }
 .mega-menu .view-more{
   text-decoration: none;
-  font-weight: 500;
+  font: 500 14px/14px Grammatika;
+  text-transform: uppercase;
   color: #162435;
 }
 .mega-menu .view-more:hover{
@@ -578,6 +580,10 @@ body.open-nav{
 }
 #header.sticky .mega-menu > li > ul{
   top: 55px;
+}
+#header.sticky .mega-menu > li > ul:before{
+  top: -28px;
+  height: 28px;
 }
 .header-user-info{
 	padding: 0;
@@ -3473,7 +3479,7 @@ section{
   #nav .mega-menu{
     display: none;
     background: rgba(255, 255, 255, 0.95);
-    padding: 0 0 20px;
+    padding: 0 0 100px;
     margin: 84px 0 0;
     font-size: 16px;
     line-height: 16px;
@@ -3823,6 +3829,7 @@ section{
     position: static;
     width: 100%;
     padding: 0;
+    column-count: 1;
     background: none;
     box-shadow: none;
     border-radius: 0;
@@ -3832,12 +3839,8 @@ section{
   .mega-menu > li > ul:before{
     display: none;
   }
-  .mega-menu > li > ul{
-    margin: 0 0 30px;
-  }
   .mega-menu > li > ul ul{
     width: 100%;
-    padding: 15px 24px;
   }
   #nav .mega-menu > li{
     position: relative;
