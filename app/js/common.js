@@ -190,9 +190,9 @@ function initOpenBlock(){
     $('.column-border-list .text .add-something').toggleClass('open-text');
     return false;
   });
-  $('.mega-menu .arrow-down').on('click', function() {
-    $(this).closest('.mega-menu-item-has-children').toggleClass('open');
-    $(this).siblings('.mega-menu .sub-menu').slideToggle();
+  $('.mega-menu .mega-indicator').on('click', function() {
+    $(this).closest('.mega-menu-item-has-children');
+    $(this).siblings('.mega-menu .mega-sub-menu').slideToggle();
     return false;
   });
 }
