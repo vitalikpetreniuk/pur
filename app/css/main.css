@@ -2011,9 +2011,6 @@ section{
 .user-form .wrap-input{
   margin: 0 0 29px;
 }
-.user-form .wrap-input p{
-  margin: 0;
-}
 .user-form .button{
   margin: 0;
 }
@@ -3486,12 +3483,6 @@ section{
     height: 100vh;
     overflow-y: auto;
   }
-  #nav.active .mega-menu-wrap{
-    display: none;
-  }
-  #nav.active .mega-menu-wrap.mobile{
-    display: block;
-  }
   #nav .mega-menu > li > a,
   #nav .mega-menu > li:first-child > a{
     padding: 25px 24px;
@@ -3894,6 +3885,12 @@ section{
   }
   .pros-comment .wrap-image{
     left: 0;
+  }
+  .accordion-info .accordion-info-list .item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 5px;
   }
 }
 @media (max-width: 767px) {
