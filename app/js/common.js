@@ -14,6 +14,7 @@ $(function() {
   initOpenBlock();
   initCustomSelect();
   initBlocksAnimate();
+  initEventsSlider()
 });
 
 function initFixedHeader() {
@@ -252,3 +253,26 @@ $('#sendform2').submit(function() {
   console.log(sended)
   $('.wrap-input').fadeOut()
 })
+
+function initEventsSlider() {
+	$('.events-slider').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		arrows: false,
+		dots: true,
+		responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 2,
+				},
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1,
+				},
+			},
+		]
+	});
+}
