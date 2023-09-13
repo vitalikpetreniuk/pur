@@ -257,7 +257,18 @@ b, strong
 
 .events-form
 	display: flex
+	flex-wrap: wrap
 	margin-top: 35px
+
+.wpcf7-response-output
+	width: 100%
+	color: #fff!important
+	margin: 3em 0.5em 1em
+
+.wpcf7-not-valid-tip
+	position: absolute
+	line-height: 1.2
+	color: #7c2f2f
 
 .events-form__input
 	width: 60%
@@ -441,5 +452,75 @@ b, strong
 
 	.schedule-info__place
 		margin-bottom: 0
+
+// PUBLICATIONS PAGE =================================================>
+
+.publications
+
+	// .publications__cont
+	&__cont
+		max-width: 1153px
+		padding: 0 15px
+		padding-top: 88px
+		padding-bottom: 10px
+		margin: 0 auto
+
+	// .publications__content
+	&__content
+
+	// .publications__item
+	&__item
+
+	// .publications__pagination
+	&__pagination.pagination
+		justify-content: center
+		margin-top: 90px
+
+.item-publications
+	padding: 45px
+	padding-right: 35px
+	border-radius: 20px
+	border: 1px solid #C5C5C5
+
+	&:not(:last-child)
+		margin-bottom: 25px
+
+	// .item-publications__type
+	&__type
+		font: 500 16px/187.5% 'Grammatika'
+		color: #567982
+		text-transform: uppercase
+		margin-bottom: 10px
+
+	// .item-publications__title
+	&__title
+		display: inline-block
+		font: 500 18px/112.5% 'Grammatika'
+		color: #162435
+		text-transform: uppercase
+		text-decoration: none
+		margin-bottom: 5px
+		max-width: 720px
+		transition: all linear 0.2s
+
+		&:hover
+			color: #567982
+
+	// .item-publications__text
+	&__text
+		font: 300 16px/187.5% 'Grammatika'
+		color: #777
+
+@media (max-width: 992px)
+
+	.publications
+
+		// .publications__cont
+		&__cont
+			padding-top: 40px
+
+@media (max-width: 768px)
+	.item-publications
+		padding: 25px
 
 @import "media" // Always at the end
